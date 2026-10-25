@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ca0p4b56olvgv"]
 
+
 [ext_resource type="Texture2D" uid="uid://dcysgejcevpse" path="res://assets/CatPackFree/Box3.png" id="1_2vj2h"]
 [ext_resource type="Script" uid="uid://nvvqqrn51lae" path="res://scripts/Script1_DarVueltas_De_La_Cruz_Unai.gd" id="2_y0acb"]
 [ext_resource type="Texture2D" uid="uid://ds4wnbd8wfpqq" path="res://assets/CatPackFree/drculacat.png" id="3_j4d2a"]
@@ -16,3 +17,7 @@ script = ExtResource("2_y0acb")
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1213823451]
 texture = ExtResource("3_j4d2a")
 script = ExtResource("4_u81e1")
+=======
+[node name="Main" type="Node2D" unique_id=1960687738]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=653168088]
