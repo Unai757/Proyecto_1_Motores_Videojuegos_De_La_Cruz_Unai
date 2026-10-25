@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://xqkj1648ri5v"]
+
+[ext_resource type="Texture2D" uid="uid://dcysgejcevpse" path="res://scenes/levels/Proyecto_1_Motores_Videojuegos_De_La_Cruz_Unai-main/scenes/levels/Proyecto_1_Motores_Videojuegos_De_La_Cruz_Unai-main/scenes/levels/Proyecto_1_Motores_Videojuegos_De_La_Cruz_Unai-main/scenes/levels/Proyecto_1_Motores_Videojuegos_De_La_Cruz_Unai-main/scenes/levels/Proyecto_1_Motores_Videojuegos_De_La_Cruz_Unai-main/scenes/levels/Proyecto_1_Motores_Videojuegos_De_La_Cruz_Unai-main/scenes/levels/Proyecto_1_Motores_Videojuegos_De_La_Cruz_Unai-main/assets/CatPackFree/Box3.png" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1101114596]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=187704864]
+texture = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="." unique_id=169886487]
+offset_left = -31.0
+offset_top = -30.0
+offset_right = 38.0
+offset_bottom = 21.0

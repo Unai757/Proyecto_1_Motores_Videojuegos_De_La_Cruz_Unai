@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://sfoju748mvpi"]
+
+[ext_resource type="Script" uid="uid://csp3ux8n12q4o" path="res://scripts/Script2_Signals_De_La_Cruz_Unai.gd" id="1_trlq0"]
+[ext_resource type="Script" uid="uid://v8kmwvhfabf7" path="res://scripts/ScriptSignalSprite_De_La_Cruz_Unai.gd" id="2_ir1et"]
+[ext_resource type="Texture2D" uid="uid://dcysgejcevpse" path="res://assets/CatPackFree/Box3.png" id="2_p5bem"]
+
+[node name="Node2D" type="Node2D" unique_id=516271471]
+script = ExtResource("1_trlq0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1160074933]
+position = Vector2(396, 166)
+texture = ExtResource("2_p5bem")
+script = ExtResource("2_ir1et")
+
+[node name="Timer" type="Timer" parent="Sprite2D" unique_id=356365891]
+autostart = true
+
+[node name="Button" type="Button" parent="." unique_id=1527354384]
+offset_left = 327.0
+offset_top = 136.0
+offset_right = 477.0
+offset_bottom = 189.0
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]
