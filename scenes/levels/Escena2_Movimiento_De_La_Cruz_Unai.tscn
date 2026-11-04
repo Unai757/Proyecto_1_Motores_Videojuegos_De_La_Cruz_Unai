@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ds4wnbd8wfpqq" path="res://assets/CatPackFree/drculacat.png" id="1_7vmid"]
 [ext_resource type="Script" uid="uid://6oa2708lxo2m" path="res://scripts/Movimiento_De_La_Cruz_Unai.gd" id="2_3hhnb"]
 
-[node name="Node2D" type="Node2D" unique_id=1538115467]
+[node name="Player" type="Node2D" unique_id=1538115467]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=675457994]
 

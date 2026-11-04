@@ -8,7 +8,7 @@
 script = ExtResource("1_trlq0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1160074933]
-position = Vector2(396, 166)
+position = Vector2(331, 166)
 texture = ExtResource("2_p5bem")
 script = ExtResource("2_ir1et")
 
@@ -16,9 +16,9 @@ script = ExtResource("2_ir1et")
 autostart = true
 
 [node name="Button" type="Button" parent="." unique_id=1527354384]
-offset_left = 327.0
-offset_top = 136.0
-offset_right = 477.0
-offset_bottom = 189.0
+offset_left = 447.0
+offset_top = 134.0
+offset_right = 597.0
+offset_bottom = 187.0
 
 [connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]

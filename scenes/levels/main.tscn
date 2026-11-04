@@ -1,23 +1,30 @@
 [gd_scene format=3 uid="uid://ca0p4b56olvgv"]
 
-
 [ext_resource type="Texture2D" uid="uid://dcysgejcevpse" path="res://assets/CatPackFree/Box3.png" id="1_2vj2h"]
-[ext_resource type="Script" uid="uid://nvvqqrn51lae" path="res://scripts/Script1_DarVueltas_De_La_Cruz_Unai.gd" id="2_y0acb"]
-[ext_resource type="Texture2D" uid="uid://ds4wnbd8wfpqq" path="res://assets/CatPackFree/drculacat.png" id="3_j4d2a"]
+[ext_resource type="Script" uid="uid://0yurgwon34xn" path="res://scripts/main.gd" id="1_b6bv0"]
+[ext_resource type="Texture2D" uid="uid://vrk733xxqdp" path="res://assets/FREE_Samurai 2D Pixel Art v1.2/Sprites/IDLE.png" id="3_j4d2a"]
 [ext_resource type="Script" uid="uid://6oa2708lxo2m" path="res://scripts/Movimiento_De_La_Cruz_Unai.gd" id="4_u81e1"]
 
 [node name="Main" type="Node2D" unique_id=1960687738]
+script = ExtResource("1_b6bv0")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=653168088]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=215270942]
+[node name="Target" type="Sprite2D" parent="." unique_id=215270942]
 texture = ExtResource("1_2vj2h")
-script = ExtResource("2_y0acb")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1213823451]
+[node name="RoundTimer" type="Timer" parent="." unique_id=1661163845]
+wait_time = 30.0
+one_shot = true
+
+[node name="StatusLabel" type="Label" parent="." unique_id=1771850196]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Player" type="Sprite2D" parent="." unique_id=573533404]
 texture = ExtResource("3_j4d2a")
 script = ExtResource("4_u81e1")
-=======
-[node name="Main" type="Node2D" unique_id=1960687738]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=653168088]
+[connection signal="timeout" from="RoundTimer" to="." method="_on_round_timer_timeout"]
+[connection signal="interact_requested" from="Player" to="." method="_on_player_interact_requested"]
+[connection signal="interact_requested" from="Player" to="Player" method="_on_interact_requested"]

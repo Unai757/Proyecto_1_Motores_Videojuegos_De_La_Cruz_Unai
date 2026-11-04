@@ -1,8 +1,9 @@
 extends Sprite2D
 
+signal interact_requested
+
 var speed = 400
 var angular_speed = PI
-
 
 func _process(delta):
 	var direction = 0
@@ -18,3 +19,7 @@ func _process(delta):
 		velocity = Vector2.UP.rotated(rotation) * speed
 
 	position += velocity * delta
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("interact"):
+		interact_requested.emit()
