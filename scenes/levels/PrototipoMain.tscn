@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bbf854k6nfst5"]
+
+[ext_resource type="Script" uid="uid://3goql3vfa2pg" path="res://scripts/Prototipo/player.gd" id="1_2niei"]
+[ext_resource type="Script" uid="uid://dyhgaqtljb4n0" path="res://scripts/Prototipo/main.gd" id="1_s3sbr"]
+[ext_resource type="Texture2D" uid="uid://bb6dacxs0uklx" path="res://assets/Sprite-0002.png" id="2_lqb6d"]
+[ext_resource type="Script" uid="uid://dpmcqu7c3jdrp" path="res://scripts/Prototipo/enemy.gd" id="3_0nvw5"]
+[ext_resource type="Script" uid="uid://dus77jx2a47uo" path="res://scripts/Prototipo/cat.gd" id="4_imj6q"]
+[ext_resource type="Texture2D" uid="uid://chohal56nnhrv" path="res://assets/enemigo2.png" id="4_lqb6d"]
+[ext_resource type="Texture2D" uid="uid://d0hamxmqgl3hc" path="res://assets/gatoasalvar.png" id="6_lqb6d"]
+
+[node name="PrototipoMain" type="Node2D" unique_id=2103906711]
+script = ExtResource("1_s3sbr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1087186606]
+custom_minimum_size = Vector2(2000, 250)
+custom_maximum_size = Vector2(2000, 250)
+offset_left = -871.0
+offset_top = 120.0
+offset_right = 1129.0
+offset_bottom = 320.0
+color = Color(0.35328716, 0.17196657, 0.21299563, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1921650627]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=878235793]
+position = Vector2(-383, 30.5)
+scale = Vector2(1, 1.0388889)
+texture = ExtResource("2_lqb6d")
+script = ExtResource("1_2niei")
+
+[node name="Enemy" type="Sprite2D" parent="." unique_id=1984619637]
+position = Vector2(-1, 58)
+texture = ExtResource("4_lqb6d")
+script = ExtResource("3_0nvw5")
+
+[node name="Cat" type="Sprite2D" parent="." unique_id=2137106680]
+position = Vector2(349, 69)
+texture = ExtResource("6_lqb6d")
+script = ExtResource("4_imj6q")
+
+[node name="StatusLabel" type="Label" parent="." unique_id=536014400]
+offset_left = -567.0
+offset_top = -308.0
+offset_right = -527.0
+offset_bottom = -285.0
+
+[connection signal="attack_requested" from="Player" to="." method="_on_player_attack_requested"]
+[connection signal="interact_requested" from="Player" to="." method="_on_player_interact_requested"]
